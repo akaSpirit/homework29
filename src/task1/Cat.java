@@ -61,6 +61,21 @@ public final class Cat {
 
     // Ваш код может находится здесь
     // остальную часть этого файла вы менять не можете
+    public static int byBreed(Cat c1, Cat c2) {
+        return c1.breed.compareTo(c2.breed);
+    }
 
+    public static int byName(Cat c1, Cat c2) {
+        return c1.name.compareTo(c2.name);
+    }
+
+    public static boolean removeIfTortieColor(Cat c){
+        return Color.TORTIE.equals(c.color);
+    }
+
+    public static boolean removeIfNameLengthFive(Cat c){
+        return c.getName().length() == 5;
     /*********/
+    }
 }
+
