@@ -5,10 +5,10 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-    // код можно менять только в особо отмеченном месте этого файла,
-    // так же возможно вам понадобится добавить что-то в 
-    // блок import и поменять имя пакета
-    // в остальных местах этого файла код менять не разрешается.
+// код можно менять только в особо отмеченном месте этого файла,
+// так же возможно вам понадобится добавить что-то в
+// блок import и поменять имя пакета
+// в остальных местах этого файла код менять не разрешается.
 
 public final class Cat {
     private static final Random r = new Random();
@@ -62,20 +62,22 @@ public final class Cat {
     // Ваш код может находится здесь
     // остальную часть этого файла вы менять не можете
     public static int byBreed(Cat c1, Cat c2) {
-        return c1.breed.compareTo(c2.breed);
+        return c1.breed.toString().compareTo(c2.breed.toString());
     }
 
     public static int byName(Cat c1, Cat c2) {
+        if (c1.name.equals(c2.name))
+            return c1.age - c2.age;
         return c1.name.compareTo(c2.name);
     }
 
-    public static boolean removeIfTortieColor(Cat c){
-        return Color.TORTIE.equals(c.color);
+    public static boolean removeIfColorTortie(Cat c) {
+        return c.color.equals(Color.TORTIE);
     }
 
-    public static boolean removeIfNameLengthFive(Cat c){
+    public static boolean removeIfNameLengthFive(Cat c) {
         return c.getName().length() == 5;
-    /*********/
+        /*********/
     }
 }
 

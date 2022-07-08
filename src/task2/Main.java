@@ -13,7 +13,7 @@ public class Main {
         
         // каждый кот должен уметь выполнять что-то своё
         var cats = new ArrayList<ActiveCat>();
-        cats.add(new ActiveCat(() -> ActiveCat.jump()));  // <-лямбда-выражение, ссылка на метод -> cats.add(new ActiveCat(ActiveCat::jump));
+        cats.add(new ActiveCat(() -> ActiveCat.jump()));  // <-лямбда-выражение, ссылка на метод -> ActiveCat::jump
         cats.add(new ActiveCat(() -> ActiveCat.sleep()));
         cats.add(new ActiveCat(() -> ActiveCat.eat()));
         cats.add(new ActiveCat(() -> ActiveCat.play()));
